@@ -1,3 +1,7 @@
-const ToCardBtn = () => <button className="toCard">В корзину</button>;
+const ToCardBtn = () => (
+  <button type="submit" className="toCard">
+    В корзину
+  </button>
+);
 
 export default ToCardBtn;
