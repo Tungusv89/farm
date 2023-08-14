@@ -9,8 +9,6 @@ const Cards = () => (
         image="./img/meat.jpg"
         good="Мясо"
         price="450Р/кг"
-        step={1}
-        placeholder={1}
         unit="кг"
       />
       <Card
@@ -18,8 +16,6 @@ const Cards = () => (
         image="./img/milk.jpg"
         good="Молоко"
         price="50Р/л"
-        step={1}
-        placeholder={1}
         unit="л"
       />
       <Card
@@ -27,8 +23,6 @@ const Cards = () => (
         image="./img/eggs.jpg"
         good="Яйца"
         price="50Р/10шт"
-        step={10}
-        placeholder={10}
         unit="шт"
       />
       <Card
@@ -37,8 +31,6 @@ const Cards = () => (
         good="Картошка"
         pack="(мешок)"
         price="38Р/кг"
-        step={38}
-        placeholder={38}
         unit="кг"
       />
     </div>
