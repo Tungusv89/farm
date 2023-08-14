@@ -5,6 +5,7 @@ const Cards = () => (
     <h2>Наши товары</h2>
     <div className="cards-grid">
       <Card
+        id="1"
         imageWebp="./img/meat.webp"
         image="./img/meat.jpg"
         good="Мясо"
@@ -12,6 +13,7 @@ const Cards = () => (
         unit="кг"
       />
       <Card
+        id="2"
         imageWebp="./img/milk.webp"
         image="./img/milk.jpg"
         good="Молоко"
@@ -19,6 +21,7 @@ const Cards = () => (
         unit="л"
       />
       <Card
+        id="3"
         imageWebp="./img/eggs.webp"
         image="./img/eggs.jpg"
         good="Яйца"
@@ -26,6 +29,7 @@ const Cards = () => (
         unit="шт"
       />
       <Card
+        id="4"
         imageWebp="./img/potato.webp"
         image="./img/potato.jpg"
         good="Картошка"

@@ -1,7 +1,11 @@
-import Counter from './Counter';
-import ToCardBtn from './ToCardBtn';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../slices/cartSlice.js';
 
 const Card = (props) => {
+  const [count, setCount] = useState(1);
+  const dispatch = useDispatch();
+
   return (
     <div className="card">
       <picture className="card-img">
@@ -17,8 +21,33 @@ const Card = (props) => {
         </span>
         <span className="card-text__price">{props.price}</span>
       </div>
-      <Counter />
-      <ToCardBtn />
+      <div className="qty">
+        <button onClick={() => setCount(count - 1)} className="qty__btn">
+          -
+        </button>
+        <div>
+          <input
+            type="number"
+            step={props.step}
+            min="1"
+            max="500"
+            placeholder={props.placeholder}
+            value={count}
+            onChange={({ target }) => setCount(Number(target.value))}
+          />
+          <span>{props.unit}</span>
+        </div>
+        <button onClick={() => setCount(count + 1)} className="qty__btn">
+          +
+        </button>
+      </div>
+      <button
+        onClick={() => dispatch(addItem({ ...props, count }))}
+        type="button"
+        className="toCard"
+      >
+        В корзину
+      </button>
     </div>
   );
 };
